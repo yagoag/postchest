@@ -1,5 +1,7 @@
 import React from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
+import Header from './components/Header';
+import Content from './components/Content';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -19,19 +21,12 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const H1 = styled.h1`
-  text-align: center;
-`;
-
-const App = () => {
-  return (
-    <>
-      <GlobalStyle />
-      <header>
-        <H1>Welcome to PostChest!</H1>
-      </header>
-    </>
-  );
-};
+const App = () => (
+  <>
+    <GlobalStyle />
+    <Header />
+    <Content />
+  </>
+);
 
 export default App;
